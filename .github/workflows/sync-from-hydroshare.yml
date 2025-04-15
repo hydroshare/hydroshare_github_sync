@@ -12,6 +12,10 @@ on:
       - main
   schedule:
     - cron: '0 0 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
     
 
 jobs:
@@ -70,7 +74,13 @@ jobs:
                     # unzip the resource
                     os.system(f'unzip -o {resource_id}.zip -d {resource_dir} && rm {resource_id}.zip')            
         "
-    - name: Create a PR with the changes
-      uses: peter-evans/create-pull-request@v7
+    - name: Commit and push the changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Sync files from HydroShare"
+        git push
+
 
     
