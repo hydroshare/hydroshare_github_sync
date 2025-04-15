@@ -66,7 +66,7 @@ jobs:
                     resource_dir = os.path.join(os.getenv('GITHUB_WORKSPACE'), resource_id)
                     os.makedirs(resource_dir, exist_ok=True)
                     # download the resource
-                    resource.download(resource_dir)
+                    resource.download()
                     # unzip the resource
                     os.system(f'unzip -o {resource_id}.zip -d {resource_dir} && rm {resource_id}.zip')            
         "
