@@ -56,7 +56,11 @@ jobs:
                 resource = hs.resource(resource_id)
 
                 # only add the resource if it has been updated in the last day
-                resource_updated_string = resource.system_metadata()["date_last_updated"]
+                try:
+                  resource_updated_string = resource.system_metadata()['date_last_updated']
+                except (KeyError, NameError):
+                  print(f'Resource {resource_id} does not have a date_last_updated field.')
+                  continue
                 resource_updated = datetime.datetime.strptime(resource_updated_string, '%Y-%m-%dT%H:%M:%S.%fZ')
                 if resource_updated > datetime.datetime.now() - datetime.timedelta(days=1):
                     resource_dir = os.path.join(os.getenv('GITHUB_WORKSPACE'), resource_id)
