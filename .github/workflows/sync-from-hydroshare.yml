@@ -1,0 +1,72 @@
+name: Sync Files from Hydroshare to GitHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      hydro-collection-id:
+        description: 'Hydroshare collection ID to sync from'
+        required: false
+        default: ac6cc75dcb0146cf9cc17a974f4bb08b
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'
+    
+
+jobs:
+  sync_from_hs_to_github:
+    strategy:
+      matrix:
+        python-version: [3.12]
+        platform: [ubuntu-latest]
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install hsclient
+    - name: Copy Files from HydroShare
+      env:
+        HYDRO_USERNAME: ${{ secrets.HYDRO_USERNAME }}
+        HYDRO_PASSWORD: ${{ secrets.HYDRO_PASSWORD }}
+        HYDRO_COLLECTION_ID: ${{ github.event.inputs.hydro-collection-id || secrets.HYDRO_COLLECTION_ID }}
+      working-directory: ${{ github.workspace }}
+      run: |
+        python -c "
+        import os
+        import datetime
+        from hsclient import HydroShare
+        hs = HydroShare(os.getenv('HYDRO_USERNAME'), os.getenv('HYDRO_PASSWORD'))
+        collection = hs.resource(os.getenv('HYDRO_COLLECTION_ID'))
+
+        # get a list of resources in the collection
+        relations = collection.metadata.relations
+        for relation in relations:
+            if relation.type.value == 'This resource includes':
+                # get the resource id by splitting the relation.value
+                resource_id = relation.value.split('/')[-1]
+                resource = hs.resource(resource_id)
+
+                # only add the resource if it has been updated in the last day
+                resource_updated_string = resource.system_metadata()["date_last_updated"]
+                resource_updated = datetime.datetime.strptime(resource_updated_string, '%Y-%m-%dT%H:%M:%S.%fZ')
+                if resource_updated > datetime.datetime.now() - datetime.timedelta(days=1):
+                    resource_dir = os.path.join(os.getenv('GITHUB_WORKSPACE'), resource_id)
+                    os.makedirs(resource_dir, exist_ok=True)
+                    # download the resource
+                    resource.download(resource_dir)
+                    # unzip the resource
+                    os.system(f'unzip -o {resource_id}.zip -d {resource_dir} && rm {resource_id}.zip')            
+        "
+    - name: Create a PR with the changes
+      uses: peter-evans/create-pull-request@v7
+
+    
