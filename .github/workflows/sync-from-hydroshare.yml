@@ -68,11 +68,10 @@ jobs:
                 resource_updated = datetime.datetime.strptime(resource_updated_string, '%Y-%m-%dT%H:%M:%S.%fZ')
                 if resource_updated > datetime.datetime.now() - datetime.timedelta(days=1):
                     resource_dir = os.path.join(os.getenv('GITHUB_WORKSPACE'), resource_id)
-                    os.makedirs(resource_dir, exist_ok=True)
                     # download the resource
                     resource.download()
                     # unzip the resource
-                    os.system(f'unzip -o {resource_id}.zip -d {resource_dir} && rm {resource_id}.zip')            
+                    os.system(f'unzip -o {resource_id}.zip && rm {resource_id}.zip')            
         "
     - name: Commit and push the changes
       run: |

@@ -1,3 +1,0 @@
-79bfef4e28354411d80f6397eb14f17f    data/contents/example_2.ipynb
-45b8073093a2c81fc8084da13fb08d59    data/resourcemap.xml
-c24bd73ae61c912f6adbbaead937f22e    data/resourcemetadata.xml
