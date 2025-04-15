@@ -1,0 +1,4 @@
+79bfef4e28354411d80f6397eb14f17f    data/contents/example_2.ipynb
+54fa31bccf2f3c184ebd8234de330467    data/contents/example_metadata_parsing.ipynb
+7148f1b4565f212ee766b21974f0e3d4    data/resourcemap.xml
+0d9ab69c2504a282fa8718dbb3e6a336    data/resourcemetadata.xml

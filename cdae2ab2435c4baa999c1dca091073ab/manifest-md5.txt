@@ -1,0 +1,3 @@
+2ebb4f42b0bebbe710053d977e2dab23    data/contents/SWOT_GISshapefiles5.ipynb
+02708ad446e01b5167bdc9f07795a8a4    data/resourcemap.xml
+a84c01a91f00d41fcc7b5ab909e90c67    data/resourcemetadata.xml

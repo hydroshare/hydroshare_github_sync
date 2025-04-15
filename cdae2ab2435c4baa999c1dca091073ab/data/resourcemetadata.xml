@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:hsterms="https://www.hydroshare.org/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+  <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+    <rdfs:label>Composite Resource</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+  </rdf:Description>
+  <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab">
+    <dc:language>eng</dc:language>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      </rdf:Description>
+    </dc:rights>
+    <dc:date>
+      <dcterms:created>
+        <rdf:value>2025-04-02T18:23:12.717026+00:00</rdf:value>
+      </dcterms:created>
+    </dc:date>
+    <dc:type rdf:resource="http://www.hydroshare.org/terms/CompositeResource"/>
+    <dc:subject>SwotViz Resource with single example notebook</dc:subject>
+    <dcterms:bibliographicCitation>Cowan, D. (2025). Single example notebook - SwotViz, HydroShare, http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab</dcterms:bibliographicCitation>
+    <dc:identifier>
+      <rdf:Description>
+        <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab"/>
+      </rdf:Description>
+    </dc:identifier>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:isPartOf>Cowan, D. (2025). SwotViz Example Notebook Collection, HydroShare, http://www.hydroshare.org/resource/ac6cc75dcb0146cf9cc17a974f4bb08b</dcterms:isPartOf>
+      </rdf:Description>
+    </dc:relation>
+    <dc:subject>SWOT</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-4621-0559"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12389</hsterms:description>
+        <hsterms:name>Cowan, Devin</hsterms:name>
+        <hsterms:phone>+1 (406) 599-9009</hsterms:phone>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12389</hsterms:hydroshare_user_id>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:email>dcowan@cuahsi.org</hsterms:email>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>SwotViz Resource with single example notebook</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-04-14T15:57:33.394825+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:title>Single example notebook - SwotViz</dc:title>
+  </hsterms:CompositeResource>
+</rdf:RDF>
