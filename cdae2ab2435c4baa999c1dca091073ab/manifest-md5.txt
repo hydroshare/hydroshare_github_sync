@@ -1,3 +1,5 @@
-2ebb4f42b0bebbe710053d977e2dab23    data/contents/SWOT_GISshapefiles5.ipynb
-02708ad446e01b5167bdc9f07795a8a4    data/resourcemap.xml
-a84c01a91f00d41fcc7b5ab909e90c67    data/resourcemetadata.xml
+848df8d730c7a2c623be9b436bb92cb2    data/contents/Global-River-Discharge-from-SWOT.jpg
+6456d93e48d4582e5c17c60cd3fd7844    data/contents/requirements.txt
+a17502b8370ff4936690de63c1ab4f95    data/contents/visualize-sos-discharge-xarray.ipynb
+ca22968fb96479b20ea8175d2c2a0e1c    data/resourcemap.xml
+d6e730e135a8181efce73cf864d2d910    data/resourcemetadata.xml

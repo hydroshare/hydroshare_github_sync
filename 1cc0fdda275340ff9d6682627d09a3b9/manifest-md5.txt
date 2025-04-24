@@ -1,3 +1,5 @@
-79bfef4e28354411d80f6397eb14f17f    data/contents/example_2.ipynb
-45b8073093a2c81fc8084da13fb08d59    data/resourcemap.xml
-c24bd73ae61c912f6adbbaead937f22e    data/resourcemetadata.xml
+848df8d730c7a2c623be9b436bb92cb2    data/contents/Global-River-Discharge-from-SWOT.jpg
+bdbd42756b7778adf526c8f9e87159a5    data/contents/compare-observed-and-sos-discharge.ipynb
+d41da5657bd920f786fd4d7e3362cd24    data/contents/requirements.txt
+9c2b1c62ec0b99556144e554a8717949    data/resourcemap.xml
+1d115b2607154a7c0c06369863cc79be    data/resourcemetadata.xml

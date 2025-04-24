@@ -1,64 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:hsterms="https://www.hydroshare.org/terms/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
-    <rdfs:label>Composite Resource</rdfs:label>
-    <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
-  </rdf:Description>
   <hsterms:CompositeResource rdf:about="http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab">
-    <dc:language>eng</dc:language>
-    <dc:rights>
+    <dc:subject>Rhine River</dc:subject>
+    <hsterms:awardInfo>
       <rdf:Description>
-        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
-        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:fundingAgencyName>National Aeronautics and Space Administration (NASA)</hsterms:fundingAgencyName>
+        <hsterms:fundingAgencyURL></hsterms:fundingAgencyURL>
+        <hsterms:awardNumber></hsterms:awardNumber>
+        <hsterms:awardTitle></hsterms:awardTitle>
       </rdf:Description>
-    </dc:rights>
+    </hsterms:awardInfo>
+    <dc:relation>
+      <rdf:Description>
+        <dcterms:references>SWOT Discharge Algorithm Working Group (DAWG). 2024. SWOT Level 4 River Discharge Products Version 1. Ver. 1. PO.DAAC, CA, USA. Dataset accessed at https://doi.org/10.5067/SWOT-SOS-V1</dcterms:references>
+      </rdf:Description>
+    </dc:relation>
+    <dc:type>
+      <rdf:Description rdf:about="http://www.hydroshare.org/terms/CompositeResource">
+        <rdfs:isDefinedBy rdf:resource="https://www.hydroshare.org/terms/"/>
+        <rdfs:label>Composite Resource</rdfs:label>
+      </rdf:Description>
+    </dc:type>
+    <dc:date>
+      <dcterms:modified>
+        <rdf:value>2025-04-23T05:41:57.462830+00:00</rdf:value>
+      </dcterms:modified>
+    </dc:date>
+    <dc:coverage>
+      <dcterms:box>
+        <rdf:value>name=Glob; projection=WGS 84 EPSG:4326; units=Decimal degrees; northlimit=89.99; eastlimit=179.99; southlimit=-89.99; westlimit=-179.99</rdf:value>
+      </dcterms:box>
+    </dc:coverage>
     <dc:date>
       <dcterms:created>
         <rdf:value>2025-04-02T18:23:12.717026+00:00</rdf:value>
       </dcterms:created>
     </dc:date>
-    <dc:type rdf:resource="http://www.hydroshare.org/terms/CompositeResource"/>
-    <dc:subject>SwotViz Resource with single example notebook</dc:subject>
-    <dcterms:bibliographicCitation>Cowan, D. (2025). Single example notebook - SwotViz, HydroShare, http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab</dcterms:bibliographicCitation>
+    <dc:relation>
+      <rdf:Description>
+        <hsterms:isExecutedBy>https://www.hydroshare.org/resource/33c45575b95f45c4bf7335faab67ed36/</hsterms:isExecutedBy>
+      </rdf:Description>
+    </dc:relation>
+    <dcterms:bibliographicCitation>Castronova, A. M., I. Garousi-Nejad (2025). Visualizing SWOT Discharge Data from the SWORD of Science (SoS) Dataset, HydroShare, http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab</dcterms:bibliographicCitation>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0002-1341-5681"/>
+        <hsterms:address>MA, US</hsterms:address>
+        <hsterms:name>Castronova, Anthony M.</hsterms:name>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=ScWTFoQAAAAJ&amp;hl=en"/>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:hydroshare_user_id>
+        <hsterms:phone>3399334127</hsterms:phone>
+        <hsterms:homepage rdf:resource="http://anthonycastronova.com"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</hsterms:description>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:email>castronova.anthony@gmail.com</hsterms:email>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Anthony_Castronova"/>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
+      </rdf:Description>
+    </dc:creator>
+    <dc:subject>SWORD of Science</dc:subject>
+    <dc:creator>
+      <rdf:Description>
+        <hsterms:address>CA, US</hsterms:address>
+        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hsterms:creatorOrder>
+        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:hydroshare_user_id>
+        <hsterms:organization>CUAHSI</hsterms:organization>
+        <hsterms:homepage></hsterms:homepage>
+        <hsterms:GoogleScholarID rdf:resource="https://scholar.google.com/citations?user=dKqI7iAAAAAJ&amp;hl=en"/>
+        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</hsterms:description>
+        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-2929-3946"/>
+        <hsterms:phone></hsterms:phone>
+        <hsterms:ResearchGateID rdf:resource="https://www.researchgate.net/profile/Irene_Garousi-Nejad"/>
+        <hsterms:name>Garousi-Nejad, Irene</hsterms:name>
+        <hsterms:email>igarousi@cuahsi.org</hsterms:email>
+      </rdf:Description>
+    </dc:creator>
+    <dc:rights>
+      <rdf:Description>
+        <hsterms:URL rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <hsterms:rightsStatement>This resource is shared under the Creative Commons Attribution CC BY.</hsterms:rightsStatement>
+      </rdf:Description>
+    </dc:rights>
     <dc:identifier>
       <rdf:Description>
         <hsterms:hydroShareIdentifier rdf:resource="http://www.hydroshare.org/resource/cdae2ab2435c4baa999c1dca091073ab"/>
       </rdf:Description>
     </dc:identifier>
+    <dc:description>
+      <rdf:Description>
+        <dcterms:abstract>This resource includes a Jupyter notebook that offers a hands-on walkthrough for accessing, exploring, and analyzing global river discharge data derived from the SWOT (Surface Water and Ocean Topography) mission using the SWORD of Science (SoS) dataset. Using NASA's Earthdata earthaccess API and xarray, users learn how to search for and load SWOT SoS granules directly from the cloud without needing to download large files locally. The notebook guides users through identifying SWORD river reaches along a river of interest (e.g., the Rhine), visualizing reach centroid locations on an interactive map, and extracting reach-specific discharge time series from selected discharge algorithm outputs (e.g., HiVDI).</dcterms:abstract>
+      </rdf:Description>
+    </dc:description>
     <dc:relation>
       <rdf:Description>
         <dcterms:isPartOf>Cowan, D. (2025). SwotViz Example Notebook Collection, HydroShare, http://www.hydroshare.org/resource/ac6cc75dcb0146cf9cc17a974f4bb08b</dcterms:isPartOf>
       </rdf:Description>
     </dc:relation>
+    <dc:subject>SWOTViZ</dc:subject>
+    <dc:subject>Discharge</dc:subject>
     <dc:subject>SWOT</dc:subject>
-    <dc:creator>
-      <rdf:Description>
-        <hsterms:ORCID rdf:resource="https://orcid.org/0000-0003-4621-0559"/>
-        <hsterms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12389</hsterms:description>
-        <hsterms:name>Cowan, Devin</hsterms:name>
-        <hsterms:phone>+1 (406) 599-9009</hsterms:phone>
-        <hsterms:hydroshare_user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12389</hsterms:hydroshare_user_id>
-        <hsterms:organization>CUAHSI</hsterms:organization>
-        <hsterms:email>dcowan@cuahsi.org</hsterms:email>
-        <hsterms:creatorOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hsterms:creatorOrder>
-      </rdf:Description>
-    </dc:creator>
-    <dc:description>
-      <rdf:Description>
-        <dcterms:abstract>SwotViz Resource with single example notebook</dcterms:abstract>
-      </rdf:Description>
-    </dc:description>
-    <dc:date>
-      <dcterms:modified>
-        <rdf:value>2025-04-14T15:57:33.394825+00:00</rdf:value>
-      </dcterms:modified>
-    </dc:date>
-    <dc:title>Single example notebook - SwotViz</dc:title>
+    <dc:language>eng</dc:language>
+    <dc:title>Visualizing SWOT Discharge Data from the SWORD of Science (SoS) Dataset</dc:title>
   </hsterms:CompositeResource>
 </rdf:RDF>
